@@ -23,5 +23,10 @@ module ReplitRails8
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Allow the app to be iframed on replit.com
+    config.action_dispatch.default_headers = {
+      "X-Frame-Options" => "ALLOWFROM replit.com"
+    }
   end
 end
